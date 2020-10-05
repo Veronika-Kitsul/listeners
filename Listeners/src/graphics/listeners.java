@@ -14,7 +14,13 @@ public class listeners
 		
 	private final int width = 800, height = 600;
 	
-	private final int rectY = height/2, rectHeight = 50, rectWidth = 50, speed = 3;
+	private int rectY = height/2;
+
+	private final int rectHeight = 50;
+
+	private final int rectWidth = 50;
+
+	private final int speed = 3;
 	private int rectX = width/2;
 	
 	// variable to keep track of our speed
@@ -80,9 +86,10 @@ public class listeners
 				else if (e.getKeyChar() == 'j')
 					rectSpeed = -speed;
 				else if (e.getKeyChar() == 'i')
-					rectSpeed = (-1/2)*speed;
+					rectY-= speed;
 				else if (e.getKeyChar() == 'm')
-					rectSpeed = (int) (0.5*speed);
+					rectY+=speed;
+				
 			}
 
 			// what we want to happen when the user stops pressing a key.
